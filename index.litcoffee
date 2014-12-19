@@ -18,11 +18,13 @@ to bundle up dependencies in an easy to use fashion. Also useful as a reference.
     path = require 'path'
     exec = require('child_process').exec
 
-### Handle errors in standard way ###
+### getErrorHandler(label) ###
+Handle errors in standard way
 
-* [String] label Just a label to know where the error came from
+#### Arguments
+1. `label` *(`String`)*: Just a label to track where the error came from
 
-<!-- -->
+#### Source
 
     getErrorHandler = (label) ->
         (err) ->
@@ -32,14 +34,16 @@ to bundle up dependencies in an easy to use fashion. Also useful as a reference.
             gutil.beep()
             @emit 'end'
 
+### browserify(src, dest) ###
 Browserify your javascripts. Sets up a watcher in and of itself that
 will iteratively update on changes
 
-* @param [String] src Source filepath to browserify
-* @param [String] dest Destination filepath
+#### Arguments
+1.`src` *(`String`)*: Source filepath to browserify
+2. `dest` *(`String`)*: Destination filepath
 
-<!-- -->
-  
+#### Source
+
     exports.browserify = (src, dest) ->
         destFileName = path.basename(dest)
         destDir = path.dirname(dest)
@@ -61,14 +65,16 @@ will iteratively update on changes
             watcher.on('update', rebundle)
             return rebundle()
 
+### coffee(options={}) ###
 Compile coffeescripts task
 
-* @param {Object} options Options for the task
-* @option options {String} src Glob of source scripts to use. Defaults to src
-* @option options {String} dir Output directory of javascripts. Defaults to lib
-* @option options {Function} errorHandler Custom error handler if any. Defaults to a bell and a message
-  
-<!-- -->
+#### Arguments
+1.`options` *(`Object`)*: Options for the task
+* `options.src` *(`String`)*: Glob of source scripts to use. Defaults to src
+* `options.dir` *(`String`)*; Output directory of javascripts. Defaults to lib
+* `options.errorHandler` *(`Function`)*; Custom error handler if any. Defaults to a bell and a message
+
+#### Source
 
     exports.coffee = (options = {}) ->
         options = _.extend {
@@ -84,14 +90,16 @@ Compile coffeescripts task
             .pipe(gulp.dest options.dir)
             return stream
 
+### help(gulp, options={})
 Help out a gulp object by adding helpers and shortcuts to it
 
-* @param [Object] gulp Gulp object
-* @param [Object] options Options for the task
-* @option options [String] src Glob of source scripts to use. Defaults to src
-* @option options [String] dir Output directory of javascripts. Defaults to lib
+#### Arguments
+1. `gulp` *('Object')*: Gulp object
+2. `options` *(`Object`)*: Options for the task
+* `options.src` *(`String`|`Array`)*: Glob of source scripts to use. Defaults to src/
+* `options.dir` *(`String`)*: Output directory of javascripts. Defaults to lib
 
-<!-- -->
+#### Source
 
     exports.help = (_gulp, options = {}) ->
         options = _.extend {
