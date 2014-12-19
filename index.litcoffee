@@ -18,7 +18,15 @@ to bundle up dependencies in an easy to use fashion. Also useful as a reference.
     path = require 'path'
     exec = require('child_process').exec
 
-### getErrorHandler(label) ###
+## Methods
+
+### Private
+* [getErrorHandler](#geterrorhandler)
+* [browserify](#browserify)
+* [coffee](#coffee)
+* [help](#help)
+
+### getErrorHandler(label) <a name="geterrorhandler"/>###
 Handle errors in standard way
 
 #### Arguments
@@ -34,7 +42,7 @@ Handle errors in standard way
             gutil.beep()
             @emit 'end'
 
-### browserify(src, dest) ###
+### browserify(src, dest) <a name="browserify"/>###
 Browserify your javascripts. Sets up a watcher in and of itself that
 will iteratively update on changes
 
@@ -65,7 +73,7 @@ will iteratively update on changes
             watcher.on('update', rebundle)
             return rebundle()
 
-### coffee(options={}) ###
+### coffee(options={}) <a href="coffee"/>###
 Compile coffeescripts task
 
 #### Arguments
@@ -90,7 +98,7 @@ Compile coffeescripts task
             .pipe(gulp.dest options.dir)
             return stream
 
-### help(gulp, options={})
+### help(gulp, options={}) <a href="help"/>###
 Help out a gulp object by adding helpers and shortcuts to it
 
 #### Arguments
