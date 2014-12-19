@@ -10,7 +10,7 @@ dependencies in an easy to use fashion.
 * Bundle up all necessary dependencies rather than tracking down Gulp docs on each new project (or copy pasting)
 
 ## Usage 
-  npm install gulp-cs-helper --save
+```npm install gulp-cs-helper --save```
   
 ```coffee
 # Gulpfile.coffee
