@@ -39,7 +39,7 @@ Browserify your javascripts. Sets up a watcher in and of itself that
 will iteratively update on changes
 
 #### Arguments
-1.`src` *(`String`)*: Source filepath to browserify
+1. `src` *(`String`)*: Source filepath to browserify
 2. `dest` *(`String`)*: Destination filepath
 
 #### Source
