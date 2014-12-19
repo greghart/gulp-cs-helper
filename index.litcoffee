@@ -120,5 +120,6 @@ Help out a gulp object by adding helpers and shortcuts to it
             src: options.src
             dir: options.dir
             coffee: exports.coffee(options)
+            browserify: _.partial(exports.browserify, options.src, options.dir)
             watchSrc: (args...) ->
                 _gulp.watch options.src, args...
