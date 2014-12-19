@@ -22,11 +22,12 @@ to bundle up dependencies in an easy to use fashion. Also useful as a reference.
 
 ### Private
 * [getErrorHandler](#geterrorhandler)
+### Public
 * [browserify](#browserify)
 * [coffee](#coffee)
 * [help](#help)
 
-### getErrorHandler(label) <a name="geterrorhandler"/>###
+### <a href="geterrorhandler"/>getErrorHandler(label)###
 Handle errors in standard way
 
 #### Arguments
@@ -42,7 +43,7 @@ Handle errors in standard way
             gutil.beep()
             @emit 'end'
 
-### browserify(src, dest) <a name="browserify"/>###
+### <a href="browserify"/>browserify(src, dest) <a name="browserify"/>###
 Browserify your javascripts. Sets up a watcher in and of itself that
 will iteratively update on changes
 
@@ -73,7 +74,7 @@ will iteratively update on changes
             watcher.on('update', rebundle)
             return rebundle()
 
-### coffee(options={}) <a href="coffee"/>###
+### <a href="coffee"/>coffee(options={}) <a href="coffee"/>###
 Compile coffeescripts task
 
 #### Arguments
@@ -98,7 +99,7 @@ Compile coffeescripts task
             .pipe(gulp.dest options.dir)
             return stream
 
-### help(gulp, options={}) <a href="help"/>###
+### <a href="help"/>help(gulp, options={}) <a href="help"/>###
 Help out a gulp object by adding helpers and shortcuts to it
 
 #### Arguments
