@@ -1,8 +1,8 @@
 # Gulp Helper
 
 ## Intro
-Helpful so you don't have to remember all the different gulp modules.
-Also useful as a reference.
+A module for exploring how to setup a Coffeescript Gulp based workflow. Basically just a personal project 
+to bundle up dependencies in an easy to use fashion. Also useful as a reference.
 
     gulp = require 'gulp'
     coffee = require 'gulp-coffee'
