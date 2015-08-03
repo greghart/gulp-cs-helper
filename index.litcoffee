@@ -5,7 +5,7 @@ A module for exploring how to setup a Coffeescript Gulp based workflow. Basicall
 to bundle up dependencies in an easy to use fashion. Also useful as a reference.
 
     gulp = require 'gulp'
-    coffee = require 'gulp-coffee'
+    cjsx = require 'gulp-cjsx'
     cache = require 'gulp-cached'
     gutil = require 'gulp-util'
     source = require 'vinyl-source-stream'
@@ -92,7 +92,7 @@ Compile coffeescripts task
         ->
             stream = gulp.src(options.src)
             .pipe(cache('coffee'))
-            .pipe(coffee())
+            .pipe(cjsx())
             .on('error', options.errorHandler)
             .pipe(gulp.dest options.dir)
             return stream

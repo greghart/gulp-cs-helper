@@ -1,26 +1,32 @@
 {
   "name": "gulp-cs-helper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A module to demonstrate a typical Coffeescript gulp compilation workflow.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "coffee -c index.litcoffee"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:greghart/gulp-cs-helper.git"
+  },
   "author": "Greg Hart",
   "license": "ISC",
   "dependencies": {
+    "browserify": "5.9.x",
+    "coffee-script": "1.7.x",
     "gulp": "3.8.6",
     "gulp-cached": "^1.0.1",
     "gulp-changed": "^0.4.1",
+    "gulp-cjsx": "^3.0.0",
     "gulp-coffee": "^2.1.1",
     "gulp-concat": "^2.3.4",
+    "gulp-jsx": "^2.0.0",
     "gulp-util": "^3.0.0",
+    "underscore": "^1.7.0",
     "vinyl-source-stream": "^0.1.1",
-    "watchify": "^1.0.1",
-    "coffee-script": "1.7.x",
-    "browserify": "5.9.x",
-    "underscore": "^1.7.0"
+    "watchify": "^1.0.1"
   },
   "devDependencies": {
     "coffee-script": "^1.7.1"
