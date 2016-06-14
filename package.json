@@ -19,7 +19,7 @@
     "gulp": "3.8.6",
     "gulp-cached": "^1.0.1",
     "gulp-changed": "^0.4.1",
-    "gulp-cjsx": "^3.0.0",
+    "gulp-cjsx": "^4.0.0",
     "gulp-coffee": "^2.1.1",
     "gulp-concat": "^2.3.4",
     "gulp-jsx": "^2.0.0",
