@@ -1,6 +1,6 @@
 {
   "name": "gulp-cs-helper",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A module to demonstrate a typical Coffeescript gulp compilation workflow.",
   "main": "index.js",
   "scripts": {
