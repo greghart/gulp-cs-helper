@@ -114,8 +114,6 @@ Help out a gulp object by adding helpers and shortcuts to it
             dir: './lib/'
         }, options
         _.extend _gulp,
-            src: options.src
-            dir: options.dir
             coffee: exports.coffee(options)
             browserify: _.partial(exports.browserify, options.src, options.dir)
             watchSrc: (args...) ->
