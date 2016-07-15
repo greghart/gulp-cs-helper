@@ -6,6 +6,7 @@ dependencies in an easy to use fashion.
 
 ## Features
 * Watch and compile Coffeescript and CJSX easily
+* Watch and browserify with Watchify 
 * Extend gulp object with sane defaults
 * Bundle up all necessary dependencies rather than tracking down Gulp docs on each new project (or copy pasting)
 
@@ -21,12 +22,11 @@ require('gulp-cs-helper').help gulp,
 
 gulp.task 'build', gulp.coffee
 gulp.task 'watch', ->
-  gulp.watch gulp.src, ['build']
+  gulp.watchSrc, ['build']
 ```
 
 Written in .litcoffee, so take a look with your favorite markdown editor to check out how it works
 
 ## Release History
 
-* 0.0.0 Initial release
-* 0.1.0 Add CJSX support 
+See CHANGELOG.md
