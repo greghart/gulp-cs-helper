@@ -56,7 +56,12 @@ will iteratively update on changes
         destDir = path.dirname(dest)
         ->
             gutil.log("GulpHelpers.Browserify -- task started for #{destFileName}")
-            watcher = watchify(browserify(src, watchify.args))
+            watcher = browserify({
+                entries: src
+                cache: {}
+                packageCache: {}
+                plugin: [watchify]
+            })
             rebundle = ->
                 gutil.log "GulpHelpers.Browserify -- Watcher for #{destFileName} triggered update"
                 watcherStream = watcher.bundle()
